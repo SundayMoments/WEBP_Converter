@@ -5,7 +5,7 @@ Python command line script to batch convert your .webp files to .png
 
 Example: python_file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_folder_name'
 
--a, -n, -f, and -n are optional flags. If you do not include -d before your directory, then it will output argument help.
+-a, -n, -f, and -l are optional flags. If you do not include -d before your directory, then it will output argument help.
 ## Features
 - Apply a custom name to the new files
 - Search all sub directories for mass conversion
