@@ -8,3 +8,4 @@
 ## Issues
 - Animated .webp files are not supported
 - Files and Folder names with spaces are not currently supported
+- Script exits rather than skipping when an error occurs
