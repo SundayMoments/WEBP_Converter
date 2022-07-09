@@ -50,3 +50,4 @@ Example: python file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_
 - Animated .webp files are not supported
 - Files and Folder names with spaces are not currently supported
 - Script exits rather than skipping when an error occurs
+- Flags must be lowercase, otherwise the script will not run
