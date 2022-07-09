@@ -32,13 +32,13 @@ You can extend the logging to see where each file in being converted from. Here 
 
 The default logging looks like this:
 
-- _>> File converted to: C:\Your_Directory\file.png_
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\file.png_
 
 Extended logging looks like this:
 
-- _>> Converted from: C:\Your_Directory\origin.png_
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> Converted from: C:\Your_Directory\origin.png_
 
-- _>> File converted to: C:\Your_Directory\file.png_ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\file.png_ 
 
 
 ## Issues
