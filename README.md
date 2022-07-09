@@ -1,6 +1,11 @@
 # Webp Converter
 Python command line script to batch convert your .webp files to .png
 
+### To run this script:
+
+Example: python_file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_folder_name'
+
+-a, -n, -f, and -n are optional flags. If you do not include -d before your directory, then it will output argument help.
 ## Features
 - Apply a custom name to the new files
 - Search all sub directories for mass conversion
@@ -39,12 +44,6 @@ Extended logging looks like this:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> Converted from: C:\Your_Directory\origin.png_
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\file.png_ 
-
-### To run this script, enter this in your command line:
-
-Example: python file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_folder_name'
-
--a, -n, -f, and -n are optional flags. If you do not include -d before your directory, then it will output argument help.
 
 ## Issues
 - Animated .webp files are not supported
