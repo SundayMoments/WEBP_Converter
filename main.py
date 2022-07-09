@@ -89,7 +89,7 @@ def main():
     # If no directory is specified, print help and exit
     if args.directory == None:
         parser.print_help()
-        return print("\nExample: python file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_folder_name'")
+        return print("\nExample: python file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_folder_name'\nWARNING: Folder names with spaces are not currently supported.")
         
     convert_webp_to_png(args.directory, args.all_dirs, args.custom_name, args.custom_folder_name, args.extended_logging)
 
