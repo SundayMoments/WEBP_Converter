@@ -36,7 +36,7 @@ The default logging looks like this:
 
 Extended logging looks like this:
 
-- _>>Converted from: C:\Your_Directory\origin.png_
+- _>> Converted from: C:\Your_Directory\origin.png_
 
 - _>> File converted to: C:\Your_Directory\file.png_ 
 
