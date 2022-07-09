@@ -1,4 +1,6 @@
 # Webp Converter
+Python command line script to batch convert your .webp files to .png
+
 ## Features
 - Convert .webp to .png
 - Apply a custom name to the new files
