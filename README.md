@@ -40,6 +40,11 @@ Extended logging looks like this:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\file.png_ 
 
+### To run this script, enter this in your command line:
+
+Example: python file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_folder_name'
+
+-a, -n, -f, and -n are optional flags. If you do not include -d before your directory, then it will output argument help.
 
 ## Issues
 - Animated .webp files are not supported
