@@ -1,7 +1,7 @@
 import glob
 import os
 import argparse
-from webptools import dwebp, cwebp
+from webptools import dwebp
 
 def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, extended_logging):
     """
