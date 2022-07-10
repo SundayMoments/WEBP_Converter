@@ -18,7 +18,7 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
         webp_files = glob.glob(f"{directory}/*.webp")
 
     if extended_logging == True:
-            print(f"\n[.webp files located:]\n{webp_files}\n")
+            print(f"\n[.webp files located:]\n{webp_files}")
 
     # If no webp files are found, exit
     if len(webp_files) == 0:
@@ -37,9 +37,8 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
         if os.path.exists(f"{directory}/{custom_folder_name}/"):
             pass
         else:
-            print(f"Directory [{directory + f'/{custom_folder_name}/'}] does not exist, creating...")
+            print(f"Directory [{directory}/{custom_folder_name}/] does not exist, creating...")
             os.mkdir(f"{directory}/{custom_folder_name}/")
-    
                     
     # Convert all webp files to png. 
     # If no custom name is specified, use the original file name
