@@ -7,9 +7,9 @@ Example: python_file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_
 
 -a, -n, -f, and -l are optional flags. If you do not include -d before your directory, then it will output argument help.
 ## Features
-- Apply a custom name to the new files
-- Search all sub directories for mass conversion
-- Place the .webp files in a custom folder
+- Apply a custom name to converted files
+- Search all sub directories for .webp files to convert
+- Place the .webp files in a folder with a custom name
 
 ## Flag Tips
 ### -f Custom Folder Name
@@ -30,23 +30,22 @@ Input  | Output
 -n Custom Name  | custom_name-1.png
 
 ### -a All Directories
-This will search all sub directories of the -d directory for .webp files, and then convert them. This is useful if you have multiple webp files scattered about.
+This will search all sub directories of the -d directory for .webp files, and then convert them. This is useful if you have multiple .webp files scattered about.
 
 ### -l Exteded Logging
 You can extend the logging to see where each file in being converted from. Here is how that looks:
 
 The default logging looks like this:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\file.png_
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\new_file.png_
 
 Extended logging looks like this:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> Converted from: C:\Your_Directory\origin.png_
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\file.png_ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\new_file.png_ 
 
 ## Issues
 - Animated .webp files are not supported
 - Files and Folder names with spaces are not currently supported
-- Script exits rather than skipping when an error occurs
 - Flags must be lowercase, otherwise the script will not run

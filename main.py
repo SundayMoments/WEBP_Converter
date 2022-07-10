@@ -18,6 +18,8 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
             print(webp_files)
     else:
         webp_files = glob.glob(f"{directory}/*.webp")
+        if extended_logging == True:
+            print(webp_files)
 
     # If no webp files are found, exit
     if len(webp_files) == 0:
