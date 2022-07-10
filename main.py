@@ -14,32 +14,31 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
     # Get all webp files in the directory
     if all_dirs == True:
         webp_files = glob.glob(f"{directory}/**/*.webp", recursive=True)
-        if extended_logging == True:
-            print(webp_files)
     else:
         webp_files = glob.glob(f"{directory}/*.webp")
-        if extended_logging == True:
-            print(webp_files)
+
+    if extended_logging == True:
+            print(f"\n[.webp files located:]\n{webp_files}\n")
 
     # If no webp files are found, exit
     if len(webp_files) == 0:
         return print(f"No webp files found in: [{directory}]")
     else:
-        print(f"\nProcessing ({len(webp_files)}) file(s) to png...")
+        print(f"\n[Processing ({len(webp_files)}) file(s) to png...]")
     # If no custom folder name is specified, create a folder called 'converted_pngs'
 
     if custom_folder_name == None:
-        if os.path.exists(directory + f'/converted_pngs/'):
+        if os.path.exists(f"{directory}/converted_pngs/"):
             pass
         else:
-            print(f"Directory [{directory + f'/converted_pngs/'}] does not exist, creating...")
-            os.mkdir(directory + f'/converted_pngs/')
+            print(f"Directory [{directory}/converted_pngs/] does not exist, creating...")
+            os.mkdir(f"{directory}/converted_pngs/")
     else:
-        if os.path.exists(directory + f'/{custom_folder_name}/'):
+        if os.path.exists(f"{directory}/{custom_folder_name}/"):
             pass
         else:
             print(f"Directory [{directory + f'/{custom_folder_name}/'}] does not exist, creating...")
-            os.mkdir(directory + f'/{custom_folder_name}/')
+            os.mkdir(f"{directory}/{custom_folder_name}/")
     
                     
     # Convert all webp files to png. 
@@ -74,13 +73,13 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
             print(f"  >> File converted to: {new_file}")
         else:
             # If the file is not converted, return an error
-            print(F"\n  >> File Skipped. [{file}] Check your directory. Folders with whitepsace are not currently supported.\n")
+            print(f"\n  >> [File skipped: ({file}) Whitespace is unsupported]\n")
             
     # Print the relative directory where the files are located
     if custom_folder_name == None:
-        print(f"Converted file location: [{directory}/converted_pngs/]")
+        print(f"[Converted file location: ([{directory}/converted_pngs/)]")
     else:
-        print(f"Converted file location: [{directory}/{custom_folder_name}/]")
+        print(f"[Converted file location: ({directory}/{custom_folder_name}/)]")
 
 def main():
     parser = argparse.ArgumentParser(description="Convert webp files to png")
