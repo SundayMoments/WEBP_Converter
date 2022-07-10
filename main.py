@@ -10,12 +10,14 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
     """
     # Change directory to the one specified by the user
     os.chdir(directory)
-
+    
     # Get all webp files in the directory
     if all_dirs == True:
-        webp_files = glob.glob(directory + '/**/*.webp', recursive=True)
+        webp_files = glob.glob(f"{directory}/**/*.webp", recursive=True)
+        if extended_logging == True:
+            print(webp_files)
     else:
-        webp_files = glob.glob(directory + '/*.webp')
+        webp_files = glob.glob(f"{directory}/*.webp")
 
     # If no webp files are found, exit
     if len(webp_files) == 0:
@@ -70,7 +72,8 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
             print(f"  >> File converted to: {new_file}")
         else:
             # If the file is not converted, return an error
-            return print("  Error: Check your directory. Folders with whitepsace are not currently supported.")
+            print(F"  >> File Skipped. [{file}] Check your directory. Folders with whitepsace are not currently supported.")
+            
     # Print the relative directory where the files are located
     if custom_folder_name == None:
         print(f"Converted file location: [{directory}/converted_pngs/]")
