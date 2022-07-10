@@ -1,7 +1,7 @@
 import glob
 import os
 import argparse
-from webptools import dwebp
+from webptools import dwebp, cwebp
 
 def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, extended_logging):
     """
@@ -74,7 +74,7 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
             print(f"  >> File converted to: {new_file}")
         else:
             # If the file is not converted, return an error
-            print(F"  >> File Skipped. [{file}] Check your directory. Folders with whitepsace are not currently supported.")
+            print(F"\n  >> File Skipped. [{file}] Check your directory. Folders with whitepsace are not currently supported.\n")
             
     # Print the relative directory where the files are located
     if custom_folder_name == None:
