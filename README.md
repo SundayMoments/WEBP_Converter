@@ -33,13 +33,15 @@ Input  | Output
 This will search all sub directories of the -d directory for .webp files, and then convert them. This is useful if you have multiple .webp files scattered about.
 
 ### -l Exteded Logging
-You can extend the logging to see where each file in being converted from. Here is how that looks:
+You can extend the logging to see where each file is being converted from. Additionally it will print the origin of each .webp file. Here is how that looks:
 
 The default logging looks like this:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> File converted to: C:\Your_Directory\new_file.png_
 
 Extended logging looks like this:
+
+&nbsp;&nbsp;['origin_file-0.webp', 'origin_file-1.webp']
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_>> Converted from: C:\Your_Directory\origin.png_
 
