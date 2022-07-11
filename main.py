@@ -25,8 +25,8 @@ def convert_webp_to_png(directory, all_dirs, custom_name, custom_folder_name, ex
         return print(f"No webp files found in: [{directory}]")
     else:
         print(f"\n[Processing ({len(webp_files)}) file(s) to png...]")
+  
     # If no custom folder name is specified, create a folder called 'converted_pngs'
-
     if custom_folder_name == None:
         if os.path.exists(f"{directory}/converted_pngs/"):
             pass
@@ -92,9 +92,9 @@ def main():
     # If no directory is specified, print help and exit
     if args.directory == None:
         parser.print_help()
-        return print("\nExample: python file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_folder_name'\nWARNING: Folder names with spaces are not currently supported.")
-        
+        return print("\nExample: python file.py -d /home/user/webp_files -a -n 'custom_name' -f 'custom_folder_name'\nWARNING: Folder names withspace are not currently supported.")
+ 
     convert_webp_to_png(args.directory, args.all_dirs, args.custom_name, args.custom_folder_name, args.extended_logging)
 
 if __name__ == "__main__":
-    main() 
+    main()
